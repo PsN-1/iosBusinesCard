@@ -7,23 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		662142C3251031060047E0A5 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662142C2251031060047E0A5 /* InfoView.swift */; };
+		662142C5251031D80047E0A5 /* FinalCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662142C4251031D80047E0A5 /* FinalCardView.swift */; };
+		662142C7251032B80047E0A5 /* CreateCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662142C6251032B80047E0A5 /* CreateCardView.swift */; };
+		662142C9251037F30047E0A5 /* PrimaryLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662142C8251037F30047E0A5 /* PrimaryLabel.swift */; };
 		66C1EEFA250FAF0A00D7DA9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C1EEF9250FAF0A00D7DA9E /* AppDelegate.swift */; };
 		66C1EEFC250FAF0A00D7DA9E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C1EEFB250FAF0A00D7DA9E /* SceneDelegate.swift */; };
-		66C1EEFE250FAF0A00D7DA9E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C1EEFD250FAF0A00D7DA9E /* ContentView.swift */; };
+		66C1EEFE250FAF0A00D7DA9E /* MainAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C1EEFD250FAF0A00D7DA9E /* MainAppView.swift */; };
 		66C1EF00250FAF0D00D7DA9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66C1EEFF250FAF0D00D7DA9E /* Assets.xcassets */; };
 		66C1EF03250FAF0D00D7DA9E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66C1EF02250FAF0D00D7DA9E /* Preview Assets.xcassets */; };
 		66C1EF06250FAF0D00D7DA9E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66C1EF04250FAF0D00D7DA9E /* LaunchScreen.storyboard */; };
+		66F8769C251153CA00DA0748 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F8769B251153CA00DA0748 /* ImagePicker.swift */; };
+		66FAD5DD250FF257008F8395 /* Pacifico-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 66FAD5DC250FF257008F8395 /* Pacifico-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		662142C2251031060047E0A5 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
+		662142C4251031D80047E0A5 /* FinalCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalCardView.swift; sourceTree = "<group>"; };
+		662142C6251032B80047E0A5 /* CreateCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCardView.swift; sourceTree = "<group>"; };
+		662142C8251037F30047E0A5 /* PrimaryLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryLabel.swift; sourceTree = "<group>"; };
 		66C1EEF6250FAF0A00D7DA9E /* BusinessCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BusinessCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66C1EEF9250FAF0A00D7DA9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66C1EEFB250FAF0A00D7DA9E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		66C1EEFD250FAF0A00D7DA9E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		66C1EEFD250FAF0A00D7DA9E /* MainAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAppView.swift; sourceTree = "<group>"; };
 		66C1EEFF250FAF0D00D7DA9E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		66C1EF02250FAF0D00D7DA9E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		66C1EF05250FAF0D00D7DA9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		66C1EF07250FAF0D00D7DA9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66F8769B251153CA00DA0748 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		66FAD5DC250FF257008F8395 /* Pacifico-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pacifico-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +49,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		662142CA25103BD40047E0A5 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				662142C8251037F30047E0A5 /* PrimaryLabel.swift */,
+				662142C2251031060047E0A5 /* InfoView.swift */,
+				66F8769B251153CA00DA0748 /* ImagePicker.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		66C1EEED250FAF0A00D7DA9E = {
 			isa = PBXGroup;
 			children = (
@@ -56,9 +78,13 @@
 		66C1EEF8250FAF0A00D7DA9E /* BusinessCard */ = {
 			isa = PBXGroup;
 			children = (
+				66FAD5DB250FF244008F8395 /* fonts */,
 				66C1EEF9250FAF0A00D7DA9E /* AppDelegate.swift */,
 				66C1EEFB250FAF0A00D7DA9E /* SceneDelegate.swift */,
-				66C1EEFD250FAF0A00D7DA9E /* ContentView.swift */,
+				66C1EEFD250FAF0A00D7DA9E /* MainAppView.swift */,
+				662142C4251031D80047E0A5 /* FinalCardView.swift */,
+				662142C6251032B80047E0A5 /* CreateCardView.swift */,
+				662142CA25103BD40047E0A5 /* Cells */,
 				66C1EEFF250FAF0D00D7DA9E /* Assets.xcassets */,
 				66C1EF04250FAF0D00D7DA9E /* LaunchScreen.storyboard */,
 				66C1EF07250FAF0D00D7DA9E /* Info.plist */,
@@ -73,6 +99,14 @@
 				66C1EF02250FAF0D00D7DA9E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		66FAD5DB250FF244008F8395 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				66FAD5DC250FF257008F8395 /* Pacifico-Regular.ttf */,
+			);
+			path = fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,7 +136,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1170;
-				LastUpgradeCheck = 1170;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Pedro Neto";
 				TargetAttributes = {
 					66C1EEF5250FAF0A00D7DA9E = {
@@ -134,6 +168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				66C1EF06250FAF0D00D7DA9E /* LaunchScreen.storyboard in Resources */,
+				66FAD5DD250FF257008F8395 /* Pacifico-Regular.ttf in Resources */,
 				66C1EF03250FAF0D00D7DA9E /* Preview Assets.xcassets in Resources */,
 				66C1EF00250FAF0D00D7DA9E /* Assets.xcassets in Resources */,
 			);
@@ -146,9 +181,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				662142C3251031060047E0A5 /* InfoView.swift in Sources */,
 				66C1EEFA250FAF0A00D7DA9E /* AppDelegate.swift in Sources */,
+				662142C7251032B80047E0A5 /* CreateCardView.swift in Sources */,
+				662142C5251031D80047E0A5 /* FinalCardView.swift in Sources */,
+				662142C9251037F30047E0A5 /* PrimaryLabel.swift in Sources */,
+				66F8769C251153CA00DA0748 /* ImagePicker.swift in Sources */,
 				66C1EEFC250FAF0A00D7DA9E /* SceneDelegate.swift in Sources */,
-				66C1EEFE250FAF0A00D7DA9E /* ContentView.swift in Sources */,
+				66C1EEFE250FAF0A00D7DA9E /* MainAppView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,6 +232,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -252,6 +293,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
