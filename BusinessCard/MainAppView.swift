@@ -42,11 +42,12 @@ struct MainAppView: View {
                     }
                     .background(RoundedRectangle(cornerRadius: 25))
                     .foregroundColor(.green)
-                    
+                    .navigationBarHidden(true)
                 }
                 
             }
             .navigationBarTitle("My Card", displayMode: .inline)
+            
         }
     }
 }

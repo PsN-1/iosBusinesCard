@@ -15,7 +15,7 @@ struct FinalCardView: View {
     var email: String
     var image: Image?
 
-    
+    @State var navigationBar = false
     
     var body: some View {
         ZStack {
@@ -43,6 +43,10 @@ struct FinalCardView: View {
             }
             
         }
+        .navigationBarHidden(navigationBar)
+        .onTapGesture(perform: {
+                self.navigationBar.toggle()
+        })
     }
     
 }

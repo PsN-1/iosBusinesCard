@@ -32,6 +32,7 @@ struct CreateCardView: View {
      */
     
     
+    @State var navigationBar = false
     
     var body: some View {
         
@@ -71,21 +72,27 @@ struct CreateCardView: View {
                 
                 NavigationLink(destination: FinalCardView(name: name, job: job, phone: phone, email: email, image: image) ){
                     Text("Submit")
-                    .foregroundColor(.black)
-                    .padding(.all)
+                        .foregroundColor(.black)
+                        .padding(.all)
                 }
                 .background(RoundedRectangle(cornerRadius: 10))
                 .foregroundColor(Color.gray)
+                .navigationBarHidden(navigationBar)
             }
             .sheet(isPresented: $showingImagePicker, onDismiss: loadImage) {
                 ImagePicker(image: self.$inputImage)
             }
+
         }
+        .onTapGesture(perform: {
+                self.navigationBar.toggle()
+        })
     }
     func loadImage() {
         guard let inputImage = inputImage else { return }
         image = Image(uiImage: inputImage)
     }
+    
 }
 
 struct ImageLabel: ViewModifier {
@@ -100,7 +107,7 @@ struct ImageLabel: ViewModifier {
             .clipShape(Rectangle())
             .overlay(
                 Rectangle().stroke(Color.white, lineWidth: 5)
-        )
+            )
     }
 }
 
