@@ -69,6 +69,7 @@ struct CreateCardView: View {
                 TextField("E-mail", text: $email)
                     .modifier(PrimaryLabel())
                 
+                
                 NavigationLink(destination: FinalCardView(name: name, job: job, phone: phone, email: email, image: image) ){
                     Text("Submit")
                         .foregroundColor(.black)
@@ -81,10 +82,10 @@ struct CreateCardView: View {
             .sheet(isPresented: $showingImagePicker, onDismiss: loadImage) {
                 ImagePicker(image: self.$inputImage)
             }
-
+            
         }
         .onTapGesture(perform: {
-                self.navigationBar.toggle()
+            self.navigationBar.toggle()
         })  
     }
     func loadImage() {
@@ -120,6 +121,7 @@ struct CreateCardView_Previews: PreviewProvider {
 //                            placeholder: Text("placeholder").foregroundColor(.red),
 //                            text: $email
 //                        )
+//----------------------
 
 //struct CustomTextField: View {
 //    var placeholder: Text

@@ -59,6 +59,16 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		66AC084225181012000F3665 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				66C1EEFD250FAF0A00D7DA9E /* MainAppView.swift */,
+				662142C4251031D80047E0A5 /* FinalCardView.swift */,
+				662142C6251032B80047E0A5 /* CreateCardView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		66C1EEED250FAF0A00D7DA9E = {
 			isa = PBXGroup;
 			children = (
@@ -81,9 +91,7 @@
 				66FAD5DB250FF244008F8395 /* fonts */,
 				66C1EEF9250FAF0A00D7DA9E /* AppDelegate.swift */,
 				66C1EEFB250FAF0A00D7DA9E /* SceneDelegate.swift */,
-				66C1EEFD250FAF0A00D7DA9E /* MainAppView.swift */,
-				662142C4251031D80047E0A5 /* FinalCardView.swift */,
-				662142C6251032B80047E0A5 /* CreateCardView.swift */,
+				66AC084225181012000F3665 /* Views */,
 				662142CA25103BD40047E0A5 /* Cells */,
 				66C1EEFF250FAF0D00D7DA9E /* Assets.xcassets */,
 				66C1EF04250FAF0D00D7DA9E /* LaunchScreen.storyboard */,
