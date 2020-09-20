@@ -40,6 +40,15 @@ struct FinalCardView: View {
                 Divider()
                 InfoView(text: phone, imageName: "phone.fill")
                 InfoView(text: email, imageName: "envelope.fill")
+                NavigationLink(destination: FinalCardView(name: "Name", job: "Job", phone: "Phone Number", email: "Email@something.com", image: nil)) {
+                    Text("")
+                        .foregroundColor(.black)
+                        .padding(.all)
+                    
+                }
+                .background(RoundedRectangle(cornerRadius: 25))
+                .foregroundColor(Color(red: 0.09, green: 0.63, blue: 0.52, opacity: 1.0))
+                .navigationBarHidden(true)
             }
             
         }

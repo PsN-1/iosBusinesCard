@@ -23,7 +23,7 @@ struct InfoView: View {
                         .foregroundColor(.green)
                     Text(text)
                 })
-            .padding(.all)
+            .padding(.horizontal)
     }
 }
 

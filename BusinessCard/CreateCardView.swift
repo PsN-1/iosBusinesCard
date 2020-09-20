@@ -69,7 +69,6 @@ struct CreateCardView: View {
                 TextField("E-mail", text: $email)
                     .modifier(PrimaryLabel())
                 
-                
                 NavigationLink(destination: FinalCardView(name: name, job: job, phone: phone, email: email, image: image) ){
                     Text("Submit")
                         .foregroundColor(.black)
@@ -86,7 +85,7 @@ struct CreateCardView: View {
         }
         .onTapGesture(perform: {
                 self.navigationBar.toggle()
-        })
+        })  
     }
     func loadImage() {
         guard let inputImage = inputImage else { return }
@@ -117,3 +116,22 @@ struct CreateCardView_Previews: PreviewProvider {
     }
 }
 
+//CustomTextField(
+//                            placeholder: Text("placeholder").foregroundColor(.red),
+//                            text: $email
+//                        )
+
+//struct CustomTextField: View {
+//    var placeholder: Text
+//    @Binding var text: String
+//    var editingChanged: (Bool)->() = { _ in }
+//    var commit: ()->() = { }
+//
+//    var body: some View {
+//        ZStack(alignment: .leading) {
+//            if text.isEmpty { placeholder }
+//            TextField("", text: $text, onEditingChanged: editingChanged, onCommit: commit)
+//
+//        }
+//    }
+//}
