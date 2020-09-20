@@ -40,7 +40,7 @@ struct FinalCardView: View {
                 Divider()
                 InfoView(text: phone, imageName: "phone.fill")
                 InfoView(text: email, imageName: "envelope.fill")
-                NavigationLink(destination: FinalCardView(name: "Name", job: "Job", phone: "Phone Number", email: "Email@something.com", image: nil)) {
+                NavigationLink(destination: CreateCardView()) {
                     Text("")
                         .foregroundColor(.black)
                         .padding(.all)
