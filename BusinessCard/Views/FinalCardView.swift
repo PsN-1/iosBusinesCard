@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import MobileCoreServices
 
 struct FinalCardView: View {
     var name: String
@@ -16,11 +17,14 @@ struct FinalCardView: View {
     var image: Image?
 
     @State var navigationBar = false
+    @State private var showingAlertEmail = false
+    @State private var showingAlertPhone = false
+
     
     var body: some View {
         ZStack {
             Color(red: 0.09, green: 0.63, blue: 0.52, opacity: 1.0)
-                .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                .edgesIgnoringSafeArea(.all)
             VStack {
                 image?
                     .resizable()
@@ -39,7 +43,25 @@ struct FinalCardView: View {
                     .font(.system(size: 25))
                 Divider()
                 InfoView(text: phone, imageName: "phone.fill")
+                    .onTapGesture(count: 2) {
+                        UIPasteboard.general.setValue(self.phone,
+                            forPasteboardType: kUTTypePlainText as String)
+                        self.showingAlertPhone = true
+                    }
+                    .alert(isPresented: $showingAlertPhone) {
+                                Alert(title: Text("Copied!"), message: Text("Copied to Clipboard!"), dismissButton: .default(Text("Got it!")))
+                            }
+                
                 InfoView(text: email, imageName: "envelope.fill")
+                    .onTapGesture(count: 2) {
+                        UIPasteboard.general.setValue(self.email,
+                            forPasteboardType: kUTTypePlainText as String)
+                        self.showingAlertEmail = true
+                    }
+                    .alert(isPresented: $showingAlertEmail) {
+                                Alert(title: Text("Copied!"), message: Text("Copied to Clipboard!"), dismissButton: .default(Text("Got it!")))
+                            }
+                
                 NavigationLink(destination: CreateCardView()) {
                     Text("")
                         .foregroundColor(.black)

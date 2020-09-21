@@ -24,7 +24,7 @@ struct CreateCardView: View {
      Add alert if any field is left blank
      Add Image Picker from library or camera - Done!
      Add tap to copy email or phone to clipboard
-     Change button appearence
+     Change button appearence - Done!
      Change background color
      Add share button
      Add QR Code func
