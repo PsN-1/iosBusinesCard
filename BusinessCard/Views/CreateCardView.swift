@@ -23,9 +23,9 @@ struct CreateCardView: View {
      TODO:
      Add alert if any field is left blank
      Add Image Picker from library or camera - Done!
-     Add tap to copy email or phone to clipboard
+     Add tap to copy email or phone to clipboard - Done!
      Change button appearence - Done!
-     Change background color
+     Option to Change background color
      Add share button
      Add QR Code func
      Fix keyboard Overlay
@@ -123,17 +123,17 @@ struct CreateCardView_Previews: PreviewProvider {
 //                        )
 //----------------------
 
-//struct CustomTextField: View {
-//    var placeholder: Text
-//    @Binding var text: String
-//    var editingChanged: (Bool)->() = { _ in }
-//    var commit: ()->() = { }
-//
-//    var body: some View {
-//        ZStack(alignment: .leading) {
-//            if text.isEmpty { placeholder }
-//            TextField("", text: $text, onEditingChanged: editingChanged, onCommit: commit)
-//
-//        }
-//    }
-//}
+struct CustomTextField: View {
+    var placeholder: Text
+    @Binding var text: String
+    var editingChanged: (Bool)->() = { _ in }
+    var commit: ()->() = { }
+
+    var body: some View {
+        ZStack(alignment: .leading) {
+            if text.isEmpty { placeholder }
+            TextField("", text: $text, onEditingChanged: editingChanged, onCommit: commit)
+
+        }
+    }
+}
