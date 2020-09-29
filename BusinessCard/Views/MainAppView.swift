@@ -14,7 +14,7 @@ struct MainAppView: View {
             
             ZStack {
                 Color(red: 0.09, green: 0.63, blue: 0.52, opacity: 1.0)
-                    .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                    .edgesIgnoringSafeArea(.all)
                 VStack {
                     Image("PedroNeto")
                         .resizable()

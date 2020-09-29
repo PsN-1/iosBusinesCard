@@ -38,7 +38,7 @@ struct CreateCardView: View {
         
         ZStack {
             Color(red: 0.09, green: 0.63, blue: 0.52, opacity: 1.0)
-                .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                .edgesIgnoringSafeArea(.all)
             
             VStack {
                 ZStack {
@@ -57,17 +57,10 @@ struct CreateCardView: View {
                     self.showingImagePicker = true
                 }
                 
-                TextField("Name", text: $name)
-                    .modifier(PrimaryLabel())
-                
-                TextField("Job", text: $job)
-                    .modifier(PrimaryLabel())
-                
-                TextField("Phone Number", text: $phone)
-                    .modifier(PrimaryLabel())
-                
-                TextField("E-mail", text: $email)
-                    .modifier(PrimaryLabel())
+                PrimaryLabel(text: $name, label: "Name: ")
+                PrimaryLabel(text: $job, label: "Job: ")
+                PrimaryLabel(text: $phone, label: "Phone: ")
+                PrimaryLabel(text: $email, label: "E-mail: ")
                 
                 
                 NavigationLink(destination: FinalCardView(name: name, job: job, phone: phone, email: email, image: image) ){
@@ -78,6 +71,7 @@ struct CreateCardView: View {
                 .background(RoundedRectangle(cornerRadius: 10))
                 .foregroundColor(Color.gray)
                 .navigationBarHidden(navigationBar)
+                
             }
             .sheet(isPresented: $showingImagePicker, onDismiss: loadImage) {
                 ImagePicker(image: self.$inputImage)
@@ -116,6 +110,10 @@ struct CreateCardView_Previews: PreviewProvider {
         CreateCardView()
     }
 }
+
+
+//TextField("Name", text: $name)
+//    .modifier(PrimaryLabel())
 
 //CustomTextField(
 //                            placeholder: Text("placeholder").foregroundColor(.red),
