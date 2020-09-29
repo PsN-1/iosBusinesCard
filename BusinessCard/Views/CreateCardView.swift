@@ -38,7 +38,7 @@ struct CreateCardView: View {
         
         ZStack {
             Color(red: 0.09, green: 0.63, blue: 0.52, opacity: 1.0)
-                .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                .edgesIgnoringSafeArea(.all)
             
             VStack {
                 ZStack {
@@ -57,10 +57,10 @@ struct CreateCardView: View {
                     self.showingImagePicker = true
                 }
                 
-                PrimaryLabel(placeholder: Text(""), text: $name, label: "Name: ")
-                PrimaryLabel(placeholder: Text(""), text: $job, label: "Job: ")
-                PrimaryLabel(placeholder: Text(""), text: $phone, label: "Phone: ")
-                PrimaryLabel(placeholder: Text(""), text: $email, label: "E-mail: ")
+                PrimaryLabel(text: $name, label: "Name: ")
+                PrimaryLabel(text: $job, label: "Job: ")
+                PrimaryLabel(text: $phone, label: "Phone: ")
+                PrimaryLabel(text: $email, label: "E-mail: ")
                 
                 
                 NavigationLink(destination: FinalCardView(name: name, job: job, phone: phone, email: email, image: image) ){

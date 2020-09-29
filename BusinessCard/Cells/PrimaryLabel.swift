@@ -10,7 +10,7 @@ import SwiftUI
 
 
 struct PrimaryLabel: View {
-    var placeholder: Text
+//    var placeholder: Text
     @Binding var text: String
     var editingChanged: (Bool)->() = { _ in }
     var commit: ()->() = { }
@@ -27,7 +27,7 @@ struct PrimaryLabel: View {
                         Text(label)
                             .italic()
                             .padding(.horizontal)
-                        if text.isEmpty { placeholder }
+//                        if text.isEmpty { placeholder }
                         TextField("", text: $text, onEditingChanged: editingChanged, onCommit: commit)
                     })
                 .padding(.horizontal)
