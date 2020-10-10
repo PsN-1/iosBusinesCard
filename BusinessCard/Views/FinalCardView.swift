@@ -15,6 +15,7 @@ struct FinalCardView: View {
     var phone: String
     var email: String
     var image: Image?
+    var bgColor: Color
 
     @State var navigationBar = false
     @State private var showingAlertEmail = false
@@ -23,8 +24,8 @@ struct FinalCardView: View {
     
     var body: some View {
         ZStack {
-            Color(red: 0.09, green: 0.63, blue: 0.52, opacity: 1.0)
-                .edgesIgnoringSafeArea(.all)
+            bgColor
+            .edgesIgnoringSafeArea(.all)
             VStack {
                 image?
                     .resizable()
@@ -69,7 +70,7 @@ struct FinalCardView: View {
                     
                 }
                 .background(RoundedRectangle(cornerRadius: 25))
-                .foregroundColor(Color(red: 0.09, green: 0.63, blue: 0.52, opacity: 1.0))
+                .foregroundColor(bgColor)
                 .navigationBarHidden(true)
             }
             
@@ -84,7 +85,7 @@ struct FinalCardView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        FinalCardView(name: "Name", job: "Job", phone: "Phone Number", email: "Email@something.com", image: nil)
+        FinalCardView(name: "Name", job: "Job", phone: "Phone Number", email: "Email@something.com", image: nil, bgColor: Color(red: 0.09, green: 0.63, blue: 0.52, opacity: 1.0))
     }
 }
 
