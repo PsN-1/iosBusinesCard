@@ -43,6 +43,11 @@ struct MainAppView: View {
                     .background(RoundedRectangle(cornerRadius: 25))
                     .foregroundColor(.green)
                     .navigationBarHidden(true)
+                    
+//                    NavigationLink(destination: TestColoPickerView()) {
+//                        Text("Test View")
+//                    }
+                    
                 }
                 
             }

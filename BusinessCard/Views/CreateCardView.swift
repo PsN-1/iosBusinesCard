@@ -6,6 +6,22 @@
 //  Copyright © 2020 Pedro Neto. All rights reserved.
 //
 
+//MARK: - TODO
+/*
+ TODO:
+ Add alert if any field is left blank
+ Add Image Picker from library or camera - Done!
+ Add tap to copy email or phone to clipboard - Done!
+ Change button appearence - Done!
+ Option to Change background color
+ Add share button
+ Add QR Code func
+ Fix keyboard Overlay
+ */
+
+
+
+
 import SwiftUI
 
 struct CreateCardView: View {
@@ -31,13 +47,15 @@ struct CreateCardView: View {
      Fix keyboard Overlay
      */
     
-    
+
     @State var navigationBar = false
+    @State private var bgColor = Color(red: 0.09, green: 0.63, blue: 0.52, opacity: 1.0)
     
     var body: some View {
         
         ZStack {
-            Color(red: 0.09, green: 0.63, blue: 0.52, opacity: 1.0)
+            bgColor
+//            Color(red: 0.09, green: 0.63, blue: 0.52, opacity: 1.0)
                 .edgesIgnoringSafeArea(.all)
             
             VStack {
@@ -62,8 +80,13 @@ struct CreateCardView: View {
                 PrimaryLabel(text: $phone, label: "Phone: ")
                 PrimaryLabel(text: $email, label: "E-mail: ")
                 
+                if #available(iOS 14.0, *) {
+                    ColorPicker("Choose the background color", selection: $bgColor, supportsOpacity: false)
+                } else {
+                    // Fallback on earlier versions
+                }
                 
-                NavigationLink(destination: FinalCardView(name: name, job: job, phone: phone, email: email, image: image) ){
+                NavigationLink(destination: FinalCardView(name: name, job: job, phone: phone, email: email, image: image, bgColor: bgColor) ){
                     Text("Submit")
                         .foregroundColor(.black)
                         .padding(.all)
@@ -78,9 +101,9 @@ struct CreateCardView: View {
             }
             
         }
-        .onTapGesture(perform: {
-            self.navigationBar.toggle()
-        })  
+//        .onTapGesture(perform: {
+//            self.navigationBar.toggle()
+//        })
     }
     func loadImage() {
         guard let inputImage = inputImage else { return }
@@ -93,7 +116,7 @@ struct ImageLabel: ViewModifier {
     func body(content: Content) -> some View {
         content
             
-            //            .resizable()
+//                        .resizable()
             .aspectRatio(contentMode: .fit)
             .frame(width: 150, height: 150)
             .foregroundColor(.white)
