@@ -41,7 +41,7 @@ struct CreateCardView: View {
      Add Image Picker from library or camera - Done!
      Add tap to copy email or phone to clipboard - Done!
      Change button appearence - Done!
-     Option to Change background color
+     Option to Change background color - Done!
      Add share button
      Add QR Code func
      Fix keyboard Overlay
